@@ -1,5 +1,15 @@
+:root{
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0087a7;
+    --gris: #757575;
+    font-family: "Krub", serif;
+}
+
 html{
     font-size: 62.5%;
+    font-family: krub, Arial, Helvetica, sans-serif;
 }
 body{
     font-size: 16px;
@@ -11,3 +21,55 @@ body{
 .titulo span{
     font-size: 2rem;
 }
+
+.navegacion-principal{
+    background-color: var(--secundario);
+}
+
+.contenedor{
+    max-width: 120rem;
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    */
+    margin: 0 auto;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal a{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    /*quitar subrayado*/
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.navegacion-principal{
+    /*padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content para filas y
+    aling-items para columnas */
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Si al menos tien 768 px (tablet)*/
+@media(min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+}
+
+/* el hover es para decirle que es una subclase a seleccionar*/
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
