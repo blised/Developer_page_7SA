@@ -155,9 +155,46 @@ body{
     text-align: center;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .boton{
         width: auto;
     }
  
+ }
+/*Mis servicios*/
+@media (min-width: 768px) {
+    .servicios{
+        display:grid;
+        /*Define el área de las columnas*/
+        /*grid-template-columns: 1fr 1fr 1fr; por fracción*/
+        /*grid-template-columns: 33.33% 33.33% 33.33% por Porcentaje  ;*/
+        grid-template-columns: repeat(3, 1fr);
+    }
+ 
+ }
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal; 
+}
+
+.servicio p{
+    /*interlineado*/
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
