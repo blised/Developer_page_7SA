@@ -153,14 +153,19 @@ body{
     width: 90%;
 /* Alinear el texto del boton */
     text-align: center;
+/* Quitar el border ; */
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
     .boton{
         width: auto;
-    }
- 
- }
+    } 
+}
 /*Mis servicios*/
 @media (min-width: 768px) {
     .servicios{
@@ -169,9 +174,8 @@ body{
         /*grid-template-columns: 1fr 1fr 1fr; por fracción*/
         /*grid-template-columns: 33.33% 33.33% 33.33% por Porcentaje  ;*/
         grid-template-columns: repeat(3, 1fr);
-    }
- 
- }
+    } 
+}
 .servicio{
     display: flex;
     flex-direction: column;
@@ -198,3 +202,99 @@ body{
     justify-content: space-evenly;
 }
 
+/* Contacto */
+.formulario{
+    background: var(--gris);
+/* Es como ahorrar media querris */
+    width: min(60rem, 100%); 
+    /* Si tengo un smartphone con 488px de ancho, ¿que valor tomara? */
+    /* Tomara el 100% porque 60rem(960px) son mas grandes que la pantalla  */
+    margin: 0 auto;
+/*  Padding sirve para dar espacios por dentro*/
+    padding: 2rem;
+/* Borde circular */
+    border-radius: 1rem;
+    
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8 rem;
+    margin-bottom: 2 rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--primario);
+}
+
+
+.contenedor-campos{
+
+}
+
+.campo{
+    margin-bottom: 1rem;
+
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+/* Tomara el espacio disponible */
+    display: block;
+}
+
+.input text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+
+}
+
+.campo textarea{
+    height: 20rem;
+}
+
+/* Utilidades */
+.w-sm-100{
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .w-sm-100{
+        width: auto;
+    }
+}
+
+.flex{
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+/* Acomodar campos */
+@media(min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        /* Darle espacio a cada fila */
+        grid-template-rows: auto auto 20rem;
+        .campo:nth-child(3),
+        .campo:nth-child(4){
+        /* Ve a la comlumna 1 a la 3 */
+            grid-column: 1/3;
+        }
+    }
+}
+
+.footer{
+    text-align: center;
+}
